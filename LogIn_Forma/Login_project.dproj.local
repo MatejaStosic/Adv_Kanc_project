@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/03 00:48:37.820,=D:\Delphi Studio\Project folder\Unit1.pas</Transaction>
+    <Transaction>2022/09/03 01:12:56.657,=D:\Delphi Studio\Project folder\Unit2.pas</Transaction>
+    <Transaction>2022/09/03 01:15:27.544,=D:\Delphi Studio\Project folder\Unit2.pas</Transaction>
+    <Transaction>2022/09/03 01:17:00.836,D:\Delphi Studio\Project folder\glavForm_Login.dfm=D:\Delphi Studio\Project folder\Unit1.dfm</Transaction>
+    <Transaction>2022/09/03 01:17:00.836,D:\Delphi Studio\Project folder\glavForm_Login.pas=D:\Delphi Studio\Project folder\Unit1.pas</Transaction>
+    <Transaction>2022/09/03 01:17:48.561,D:\Delphi Studio\Project folder\introForm_Login.pas=D:\Delphi Studio\Project folder\Unit2.pas</Transaction>
+    <Transaction>2022/09/03 01:17:48.561,D:\Delphi Studio\Project folder\introForm_Login.dfm=D:\Delphi Studio\Project folder\Unit2.dfm</Transaction>
+    <Transaction>2022/09/03 01:19:20.035,C:\Users\matej\Desktop\Adv_Kanc_Project\Login Forma\glavForm_Login.pas=D:\Delphi Studio\Project folder\glavForm_Login.pas</Transaction>
+    <Transaction>2022/09/03 01:19:20.035,C:\Users\matej\Desktop\Adv_Kanc_Project\Login Forma\glavForm_Login.dfm=D:\Delphi Studio\Project folder\glavForm_Login.dfm</Transaction>
+    <Transaction>2022/09/03 01:19:25.420,C:\Users\matej\Desktop\Adv_Kanc_Project\Login Forma\introForm_Login.dfm=D:\Delphi Studio\Project folder\introForm_Login.dfm</Transaction>
+    <Transaction>2022/09/03 01:19:25.420,C:\Users\matej\Desktop\Adv_Kanc_Project\Login Forma\introForm_Login.pas=D:\Delphi Studio\Project folder\introForm_Login.pas</Transaction>
+    <Transaction>2022/09/03 01:54:28.359,C:\Users\matej\Desktop\Adv_Kanc_Project\Login Forma\Login_project.dproj=D:\Delphi Studio\Project folder\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
