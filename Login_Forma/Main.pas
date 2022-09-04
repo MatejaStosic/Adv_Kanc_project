@@ -9,7 +9,7 @@ uses
   uniEdit, uniImage, uniButton, Vcl.Imaging.pngimage, Vcl.Imaging.jpeg;
 
 type
-  TLoginform = class(TUniForm)
+  TLogin = class(TUniForm)
     UniImage1: TUniImage;
     UniImage2: TUniImage;
     UniLabel1: TUniLabel;
@@ -27,7 +27,7 @@ type
     { Public declarations }
   end;
 
-function Loginform: TLoginform;
+function Login: TLogin;
 
 implementation
 
@@ -36,22 +36,23 @@ implementation
 uses
   uniGUIVars, MainModule, uniGUIApplication, adv_form_pocetna;
 
-function Loginform: TLoginform;
+function Login: TLogin;
 begin
-  Result := TLoginform(UniMainModule.GetFormInstance(TLoginform));
+  Result := TLogin(UniMainModule.GetFormInstance(TLogin));
 end;
 
-procedure TLoginform.UniButton1Click(Sender: TObject);
+procedure TLogin.UniButton1Click(Sender: TObject);
 var
   user, password: string;
 
 begin
+
      user:='admin';
      password:='admin';
 
 
      if (edituser.Text = user) and (editpassword.Text = password) then
-     adv_form_pocetna1.show
+     Pocetna.show
             else if (edituser.Text = '') and (editpassword.Text = '') then
                  MessageDlg('Niste uneli username i password!', mtWarning, [mbOK])
              else if (edituser.Text = 'admin') and (editpassword.Text = '') then
@@ -63,19 +64,20 @@ begin
      
 end;
 
-procedure TLoginform.UniButton2Click(Sender: TObject);
+procedure TLogin.UniButton2Click(Sender: TObject);
 begin
 CLOSE;
 end;
 
-procedure TLoginform.UniFormShow(Sender: TObject);
+procedure TLogin.UniFormShow(Sender: TObject);
 begin
      edituser.clear;
      editpassword.clear;
+     edituser.SetFocus;
 
 end;
 
 initialization
-  RegisterAppFormClass(TLoginform);
+  RegisterAppFormClass(TLogin);
 
 end.

@@ -6,19 +6,29 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics,
   Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
   uniGUIClasses, uniGUIForm, Vcl.Menus, uniMainMenu, uniGUIBaseClasses,
-  uniButton, uniBitBtn;
+  uniButton, uniBitBtn, uniPanel, uniLabel, uniImage, Vcl.Imaging.jpeg,
+  Vcl.Imaging.pngimage;
 
 type
-  Tadv_form_pocetna1 = class(TUniForm)
+  TPocetna = class(TUniForm)
+    UniPanel1: TUniPanel;
+    UniPanel2: TUniPanel;
+    UniPanel3: TUniPanel;
+    UniPanel4: TUniPanel;
+    UniButton1: TUniButton;
+    UniImage1: TUniImage;
+    UniImage2: TUniImage;
     UniBitBtn1: TUniBitBtn;
     procedure UniBitBtn1Click(Sender: TObject);
+    procedure UniFormShow(Sender: TObject);
+    procedure UniFormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
     { Public declarations }
   end;
 
-function adv_form_pocetna1: Tadv_form_pocetna1;
+function Pocetna: TPocetna;
 
 implementation
 
@@ -27,14 +37,24 @@ implementation
 uses
   MainModule, uniGUIApplication, Main;
 
-function adv_form_pocetna1: Tadv_form_pocetna1;
+function Pocetna: TPocetna;
 begin
-  Result := Tadv_form_pocetna1(UniMainModule.GetFormInstance(Tadv_form_pocetna1));
+  Result := TPocetna(UniMainModule.GetFormInstance(TPocetna));
 end;
 
-procedure Tadv_form_pocetna1.UniBitBtn1Click(Sender: TObject);
+procedure TPocetna.UniBitBtn1Click(Sender: TObject);
 begin
             Close;
+end;
+
+procedure TPocetna.UniFormClose(Sender: TObject; var Action: TCloseAction);
+begin
+     Login.Show;
+end;
+
+procedure TPocetna.UniFormShow(Sender: TObject);
+begin
+     Login.Visible:= False;
 end;
 
 end.

@@ -1,4 +1,4 @@
-object Loginform: TLoginform
+object Login: TLogin
   Left = 0
   Top = 0
   ClientHeight = 344
@@ -510,10 +510,6 @@ object Loginform: TLoginform
       06E3988393FA6A0B83D25D0F4451E94146C100F58C5414558A0A0150DA420391
       4496C537A0A8F4051E82AC4A8320390C21B651A04981004C09813FFFD9}
     Align = alClient
-    ExplicitLeft = 224
-    ExplicitTop = 64
-    ExplicitWidth = 128
-    ExplicitHeight = 128
   end
   object UniImage2: TUniImage
     Left = -2
@@ -6877,6 +6873,7 @@ object Loginform: TLoginform
     Width = 281
     Height = 23
     Hint = ''
+    PasswordChar = '*'
     BorderStyle = ubsSingle
     Text = 'UniEdit1'
     TabOrder = 5

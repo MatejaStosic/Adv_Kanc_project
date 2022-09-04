@@ -4,8 +4,9 @@ uses
   Forms,
   ServerModule in 'ServerModule.pas' {UniServerModule: TUniGUIServerModule},
   MainModule in 'MainModule.pas' {UniMainModule: TUniGUIMainModule},
-  Main in 'Main.pas' {Loginform: TUniForm},
-  adv_form_pocetna in 'adv_form_pocetna.pas' {adv_form_pocetna1: TUniForm};
+  Main in 'Main.pas' {Login: TUniForm},
+  adv_form_pocetna in 'adv_form_pocetna.pas' {Pocetna: TUniForm},
+  DataModul in 'DataModul.pas' {DataModule1: TDataModule};
 
 {$R *.res}
 
