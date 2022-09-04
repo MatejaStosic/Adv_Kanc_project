@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/04 01:55:59.000.868,=C:\Users\matej\Desktop\Adv_Kanc_Project\Login Forma\Main.pas</Transaction>
+    <Transaction>2022/09/04 01:55:59.000.025,=C:\Users\matej\Desktop\Adv_Kanc_Project\Login Forma\ServerModule.pas</Transaction>
+    <Transaction>2022/09/04 01:55:59.000.273,=C:\Users\matej\Desktop\Adv_Kanc_Project\Login Forma\MainModule.pas</Transaction>
+    <Transaction>2022/09/04 02:48:31.000.318,=C:\Users\matej\Desktop\Adv_Kanc_Project\Login Forma\Unit1.pas</Transaction>
+    <Transaction>2022/09/04 03:09:04.000.427,C:\Users\matej\Desktop\Adv_Kanc_Project\Login Forma\Unit1.dfm=C:\Users\matej\Desktop\Adv_Kanc_Project\Login Forma\adv_form.dfm</Transaction>
+    <Transaction>2022/09/04 03:09:04.000.427,C:\Users\matej\Desktop\Adv_Kanc_Project\Login Forma\Unit1.pas=C:\Users\matej\Desktop\Adv_Kanc_Project\Login Forma\adv_form.pas</Transaction>
+    <Transaction>2022/09/04 03:11:26.000.028,C:\Users\matej\Desktop\Adv_Kanc_Project\Login Forma\adv_form.pas=C:\Users\matej\Desktop\Adv_Kanc_Project\Login Forma\adv_form_pocetna.pas</Transaction>
+    <Transaction>2022/09/04 03:11:26.000.028,C:\Users\matej\Desktop\Adv_Kanc_Project\Login Forma\adv_form.dfm=C:\Users\matej\Desktop\Adv_Kanc_Project\Login Forma\adv_form_pocetna.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
