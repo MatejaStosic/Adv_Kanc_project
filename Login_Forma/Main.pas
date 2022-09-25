@@ -21,6 +21,7 @@ type
     procedure UniFormShow(Sender: TObject);
     procedure UniButton1Click(Sender: TObject);
     procedure UniButton2Click(Sender: TObject);
+    procedure UniFormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,7 +35,7 @@ implementation
 {$R *.dfm}
 
 uses
-  uniGUIVars, MainModule, uniGUIApplication, adv_form_pocetna;
+  uniGUIVars, MainModule, uniGUIApplication, adv_form_pocetna, htmlForm;
 
 function Login: TLogin;
 begin
@@ -52,7 +53,7 @@ begin
 
 
      if (edituser.Text = user) and (editpassword.Text = password) then
-     Pocetna.show
+     html_form.show
             else if (edituser.Text = '') and (editpassword.Text = '') then
                  MessageDlg('Niste uneli username i password!', mtWarning, [mbOK])
              else if (edituser.Text = 'admin') and (editpassword.Text = '') then
@@ -69,10 +70,16 @@ begin
 CLOSE;
 end;
 
+procedure TLogin.UniFormCreate(Sender: TObject);
+begin
+  edituser.Text := 'admin';
+  editpassword.Text := 'admin';
+end;
+
 procedure TLogin.UniFormShow(Sender: TObject);
 begin
-     edituser.clear;
-     editpassword.clear;
+     //edituser.clear;
+     //editpassword.clear;
      edituser.SetFocus;
 
 end;

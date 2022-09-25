@@ -1,0 +1,16 @@
+﻿[mainDataModul.queryPrikazPoruka]
+Coordinates=193,78,217,58
+
+[mainDataModul.queryKorisnici]
+Coordinates=10,10,189,58
+
+[mainDataModul.queryInsert]
+Coordinates=10,78,173,58
+
+[mainDataModul.queryPoslataDoc]
+Coordinates=325,10,206,58
+
+[]
+Coordinates=10,146,78,36
+Visible=True
+

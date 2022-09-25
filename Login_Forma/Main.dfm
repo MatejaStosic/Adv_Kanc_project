@@ -7,6 +7,7 @@ object Login: TLogin
   OnShow = UniFormShow
   OldCreateOrder = False
   MonitoredKeys.Keys = <>
+  OnCreate = UniFormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object UniImage1: TUniImage
