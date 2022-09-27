@@ -22,6 +22,8 @@ type
     editEmail: TUniEdit;
     UniButton1: TUniButton;
     UniButton2: TUniButton;
+    UniLabel6: TUniLabel;
+    editBrojLicne: TUniEdit;
     procedure UniButton1Click(Sender: TObject);
     procedure UniFormClose(Sender: TObject; var Action: TCloseAction);
   private
@@ -46,7 +48,7 @@ end;
 
 procedure Tklijent_dodaj.UniButton1Click(Sender: TObject);
 begin
-     mainDataModul.queryInsertKlijenti.ExecSQL('INSERT INTO klijenti (ime_klijenta, prezime_klijenta, adresa_klijenta, email_klijenta) VALUES( "' + editIme.Text + '" , "' + editPrezime.Text +  '" , "' + editAdresa.Text + '" , "' + editEmail.Text +  '")') ;
+     mainDataModul.queryInsertKlijenti.ExecSQL('INSERT INTO klijenti (ime_klijenta, prezime_klijenta, adresa_klijenta, email_klijenta, broj_licne) VALUES( "' + editIme.Text + '" , "' + editPrezime.Text +  '" , "' + editAdresa.Text + '" , "' + editEmail.Text +  '" , "' + editBrojLicne.Text + '" )') ;
 
      ShowMessage('Uspesno ste dodali klijenta!');
 

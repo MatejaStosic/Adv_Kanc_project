@@ -64,10 +64,6 @@ begin
           Login.Show;
           html_form.Hide;
      end
-     else if EventName = 'posalji_fakturu' then
-     begin
-          popunjavanje_fakture.Show;
-     end
      else if EventName = 'advokatska_tarifa' then
      begin
           adv_tarifa.Show;

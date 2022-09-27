@@ -26,13 +26,19 @@ type
     adresa_klijenta: TUniLabel;
     editAdresaKlijenta: TUniEdit;
     pib_klijenta: TUniLabel;
-    editPIB: TUniEdit;
+    editBrojLicne: TUniEdit;
     UniLabel3: TUniLabel;
     editPrikazCene: TUniEdit;
     UniCheckBox1: TUniCheckBox;
     UniCheckBox2: TUniCheckBox;
     UniCheckBox3: TUniCheckBox;
     UniCheckBox4: TUniCheckBox;
+    UniLabel4: TUniLabel;
+    editPrezime: TUniEdit;
+    UniLabel5: TUniLabel;
+    editEmail: TUniEdit;
+    UniButton2: TUniButton;
+    UniButton1: TUniButton;
     procedure UniButton1Click(Sender: TObject);
     procedure UniFormCreate(Sender: TObject);
     procedure UniRadioButton1ChangeValue(Sender: TObject);
@@ -42,7 +48,7 @@ type
   private
     { Private declarations }
   public
-    var cenaUsluge1, cenaUsluge2, cenaUsluge3, cenaUsluge4, ukupnaCena : Integer;
+    var cenaUsluge1, cenaUsluge2, cenaUsluge3, cenaUsluge4, ukupnaCena, indeks : Integer;
   end;
 
 function popunjavanje_fakture: Tpopunjavanje_fakture;
@@ -52,7 +58,7 @@ implementation
 {$R *.dfm}
 
 uses
-  MainModule, uniGUIApplication, faktura_form;
+  MainModule, uniGUIApplication, faktura_form, FakturaFinal;
 
 function popunjavanje_fakture: Tpopunjavanje_fakture;
 begin
@@ -61,8 +67,8 @@ end;
 
 procedure Tpopunjavanje_fakture.UniButton1Click(Sender: TObject);
 begin
-     faktura.Show;
-     mainDataModul.queryInsertFakturaKlijent.ExecSQL('INSERT INTO faktura_klijent (ime_kompanije, adresa, poreski_broj) VALUES ("' + editImeKlijenta.Text + '" , "' + editAdresaKlijenta.Text + '" , "' + editPIB.Text + '" )');
+      editFakturaFinal.show;
+      self.Hide;
 end;
 
 procedure Tpopunjavanje_fakture.UniFormCreate(Sender: TObject);

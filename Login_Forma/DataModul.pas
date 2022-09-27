@@ -62,6 +62,14 @@ type
     queryUpdate: TFDQuery;
     dsKlijenti: TDataSource;
     queryPoslataDoc: TFDQuery;
+    queryFaktura: TFDQuery;
+    FDAutoIncField2: TFDAutoIncField;
+    StringField7: TStringField;
+    StringField8: TStringField;
+    StringField9: TStringField;
+    StringField10: TStringField;
+    queryKlijentibroj_licne: TStringField;
+    queryDelete: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
@@ -106,7 +114,8 @@ begin
   queryAdvokatskaTarifa1.Close;
   queryAdvokatskaTarifa1.Open;
 
-
+  queryFaktura.Close;
+  queryFaktura.Open;
 
 
 

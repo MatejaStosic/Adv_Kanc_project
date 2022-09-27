@@ -2,7 +2,7 @@ object popunjavanje_fakture: Tpopunjavanje_fakture
   Left = 0
   Top = 0
   ClientHeight = 535
-  ClientWidth = 917
+  ClientWidth = 700
   Caption = 'popunjavanje_fakture'
   OldCreateOrder = False
   MonitoredKeys.Keys = <>
@@ -12,14 +12,15 @@ object popunjavanje_fakture: Tpopunjavanje_fakture
   object UniPanel4: TUniPanel
     Left = 0
     Top = 0
-    Width = 917
+    Width = 700
     Height = 535
     Hint = ''
     Align = alClient
     TabOrder = 0
     Caption = 'UniPanel1'
+    ExplicitWidth = 917
     object UniPanel3: TUniPanel
-      Left = 290
+      Left = 361
       Top = 1
       Width = 343
       Height = 533
@@ -99,18 +100,35 @@ object popunjavanje_fakture: Tpopunjavanje_fakture
         TabOrder = 7
         OnChange = UniRadioButton4ChangeValue
       end
+      object UniButton2: TUniButton
+        Left = 208
+        Top = 488
+        Width = 107
+        Height = 33
+        Hint = ''
+        Caption = 'Cancle'
+        TabOrder = 8
+      end
+      object UniButton1: TUniButton
+        Left = 80
+        Top = 488
+        Width = 107
+        Height = 33
+        Hint = ''
+        Caption = 'Zavrsi'
+        TabOrder = 9
+        OnClick = UniButton1Click
+      end
     end
     object UniPanel1: TUniPanel
       Left = 1
       Top = 1
-      Width = 289
+      Width = 360
       Height = 533
       Hint = ''
       Align = alLeft
       TabOrder = 2
       Caption = ''
-      ExplicitLeft = -4
-      ExplicitTop = 3
       object UniSplitter1: TUniSplitter
         Left = 1
         Top = 1
@@ -136,8 +154,8 @@ object popunjavanje_fakture: Tpopunjavanje_fakture
         TabOrder = 2
       end
       object editImeKlijenta: TUniEdit
-        Left = 88
-        Top = 38
+        Left = 176
+        Top = 40
         Width = 121
         Hint = ''
         Text = ''
@@ -154,22 +172,60 @@ object popunjavanje_fakture: Tpopunjavanje_fakture
         Color = clBtnFace
         TabOrder = 4
       end
+      object UniLabel4: TUniLabel
+        Left = 13
+        Top = 89
+        Width = 78
+        Height = 13
+        Hint = ''
+        Caption = 'Prezime klijenta:'
+        ParentColor = False
+        Color = clBtnFace
+        TabOrder = 5
+      end
+      object editPrezime: TUniEdit
+        Left = 176
+        Top = 80
+        Width = 121
+        Hint = ''
+        Text = ''
+        TabOrder = 6
+      end
+      object UniLabel5: TUniLabel
+        Left = 13
+        Top = 169
+        Width = 65
+        Height = 13
+        Hint = ''
+        Caption = 'Email klijenta:'
+        ParentColor = False
+        Color = clBtnFace
+        TabOrder = 7
+      end
+      object editEmail: TUniEdit
+        Left = 176
+        Top = 160
+        Width = 121
+        Hint = ''
+        Text = ''
+        TabOrder = 8
+      end
     end
   end
   object adresa_klijenta: TUniLabel
     Left = 14
-    Top = 89
-    Width = 34
+    Top = 126
+    Width = 38
     Height = 13
     Hint = ''
-    Caption = 'Adresa'
+    Caption = 'Adresa:'
     ParentColor = False
     Color = clBtnFace
     TabOrder = 1
   end
   object editAdresaKlijenta: TUniEdit
-    Left = 89
-    Top = 80
+    Left = 177
+    Top = 122
     Width = 121
     Hint = ''
     Text = ''
@@ -177,30 +233,30 @@ object popunjavanje_fakture: Tpopunjavanje_fakture
   end
   object pib_klijenta: TUniLabel
     Left = 14
-    Top = 131
-    Width = 20
+    Top = 207
+    Width = 75
     Height = 13
     Hint = ''
-    Caption = 'PIB:'
+    Caption = 'Broj licne karte:'
     ParentColor = False
     Color = clBtnFace
     TabOrder = 3
   end
-  object editPIB: TUniEdit
-    Left = 89
-    Top = 122
+  object editBrojLicne: TUniEdit
+    Left = 177
+    Top = 198
     Width = 121
     Hint = ''
     Text = ''
     TabOrder = 4
   end
   object UniLabel3: TUniLabel
-    Left = 314
+    Left = 385
     Top = 168
-    Width = 59
+    Width = 92
     Height = 13
     Hint = ''
-    Caption = 'Cena usluga'
+    Caption = 'Ukupno zaduzenje:'
     ParentColor = False
     Color = clBtnFace
     TabOrder = 5

@@ -119,5 +119,24 @@ object klijent_dodaj: Tklijent_dodaj
       Caption = 'Otkazi'
       TabOrder = 11
     end
+    object UniLabel6: TUniLabel
+      Left = 40
+      Top = 288
+      Width = 47
+      Height = 13
+      Hint = ''
+      Caption = 'Broj licne:'
+      ParentColor = False
+      Color = clBtnFace
+      TabOrder = 12
+    end
+    object editBrojLicne: TUniEdit
+      Left = 112
+      Top = 279
+      Width = 193
+      Hint = ''
+      Text = ''
+      TabOrder = 13
+    end
   end
 end

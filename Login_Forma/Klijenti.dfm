@@ -36,6 +36,7 @@ object prikaz_klijenata: Tprikaz_klijenata
       Hint = ''
       Caption = 'Izbrisi Klijenta'
       TabOrder = 2
+      OnClick = UniButton3Click
     end
     object UniButton1: TUniButton
       Left = 50
@@ -55,6 +56,16 @@ object prikaz_klijenata: Tprikaz_klijenata
       Hint = ''
       Text = ''
       TabOrder = 4
+    end
+    object UniButton4: TUniButton
+      Left = 48
+      Top = 304
+      Width = 121
+      Height = 41
+      Hint = ''
+      Caption = 'Posalji fakturu'
+      TabOrder = 5
+      OnClick = UniButton4Click
     end
   end
   object UniDBGrid1: TUniDBGrid

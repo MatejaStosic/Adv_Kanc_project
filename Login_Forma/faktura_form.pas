@@ -75,7 +75,7 @@ begin
 
      editIme.Caption :=  popunjavanje_fakture.editImeKlijenta.Text;
      editAdresa.Caption := popunjavanje_fakture.editAdresaKlijenta.Text;
-     editPIB.Caption := popunjavanje_fakture.editPIB.Text;
+     editPIB.Caption := popunjavanje_fakture.editBrojLicne.Text;
 
 
 

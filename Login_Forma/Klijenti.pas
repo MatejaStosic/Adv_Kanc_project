@@ -18,9 +18,12 @@ type
     UniButton1: TUniButton;
     UniDBGrid1: TUniDBGrid;
     editSearch: TUniEdit;
+    UniButton4: TUniButton;
     procedure UniButton1Click(Sender: TObject);
     procedure UniButton2Click(Sender: TObject);
     procedure UniFormCreate(Sender: TObject);
+    procedure UniButton4Click(Sender: TObject);
+    procedure UniButton3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,7 +38,7 @@ implementation
 {$R *.dfm}
 
 uses
-  MainModule, uniGUIApplication;
+  MainModule, uniGUIApplication, popunjavanje_fakture_form;
 
 function prikaz_klijenata: Tprikaz_klijenata;
 begin
@@ -80,8 +83,72 @@ if(editSearch.Text = '') then
   mainDataModul.queryKlijenti.Next;
   end;
 
+  
+
 
   end;
+
+procedure Tprikaz_klijenata.UniButton3Click(Sender: TObject);
+begin
+if(editSearch.Text = '') then
+  begin
+    ShowMessage('Unesite indeks dobavljaca!');
+    exit
+  end;
+
+  indekstext := editSearch.Text;
+  indeks := indekstext.ToInteger;
+
+  mainDataModul.queryKlijenti.First;
+  while not mainDataModul.queryKlijenti.Eof do
+  begin
+    if mainDataModul.queryKlijenti['id_klijenta'] = IntToStr(indeks) then
+    begin
+      mainDataModul.queryDelete.ExecSQL('DELETE FROM Klijenti WHERE id_klijenta = ' + IntToStr(indeks));
+      ShowMessage('Uspesno brisanje.');
+      mainDataModul.queryKlijenti.Refresh;
+      exit
+    end;
+
+  mainDataModul.queryKlijenti.Next;
+
+  end;
+end;
+
+procedure Tprikaz_klijenata.UniButton4Click(Sender: TObject);
+begin
+if(editSearch.Text = '') then
+  begin
+    ShowMessage('Unesite indeks dobavljaca!');
+    exit
+  end;
+
+  indekstext := editSearch.Text;
+  indeks := indekstext.ToInteger;
+
+  mainDataModul.queryKlijenti.First;
+  while not mainDataModul.queryKlijenti.Eof do
+  begin
+    if mainDataModul.queryKlijenti['id_klijenta'] = IntToStr(indeks) then
+    begin
+
+      popunjavanje_fakture.indeks := mainDataModul.queryKlijenti['id_klijenta'];
+      popunjavanje_fakture.editImeKlijenta.Text := mainDataModul.queryKlijenti['ime_klijenta'];
+      popunjavanje_fakture.editPrezime.Text := mainDataModul.queryKlijenti['prezime_klijenta'];
+      popunjavanje_fakture.editAdresaKlijenta.Text := mainDataModul.queryKlijenti['adresa_klijenta'];
+      popunjavanje_fakture.editEmail.Text := mainDataModul.queryKlijenti['email_klijenta'];
+      popunjavanje_fakture.editBrojLicne.Text := mainDataModul.queryKlijenti['broj_licne'];
+
+
+
+      self.Hide;
+      popunjavanje_fakture.Show;
+      exit
+    end;
+
+  mainDataModul.queryKlijenti.Next;
+  end;
+end;
 
 procedure Tprikaz_klijenata.UniFormCreate(Sender: TObject);
 begin

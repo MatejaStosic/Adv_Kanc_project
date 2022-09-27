@@ -22,6 +22,8 @@ type
     editEmail: TUniEdit;
     UniButton1: TUniButton;
     UniButton2: TUniButton;
+    UniLabel6: TUniLabel;
+    editBrojLicne: TUniEdit;
     procedure UniButton1Click(Sender: TObject);
     procedure UniButton2Click(Sender: TObject);
   private
@@ -47,7 +49,7 @@ end;
 procedure Tklijent_izmena.UniButton1Click(Sender: TObject);
 begin
 
-     mainDataModul.queryUpdate.ExecSQL('UPDATE klijenti SET ime_klijenta= "' + editIme.Text + '", prezime_klijenta = "' + editPrezime.Text + '", adresa_klijenta= "' + editAdresa.Text + '", email_klijenta= "' + editEmail.Text + '"  WHERE id_klijenta = ' + indeks.ToString );
+     mainDataModul.queryUpdate.ExecSQL('UPDATE klijenti SET ime_klijenta= "' + editIme.Text + '", prezime_klijenta = "' + editPrezime.Text + '", adresa_klijenta= "' + editAdresa.Text + '", email_klijenta= "' + editEmail.Text + '", broj_licne= "' + editBrojLicne.Text + '"  WHERE id_klijenta = ' + indeks.ToString );
      ShowMessage('Uspesna izmena');
      mainDataModul.queryKlijenti.Refresh;
      prikaz_klijenata.Show;

@@ -284,7 +284,7 @@ object mainDataModul: TmainDataModul
     SQL.Strings = (
       'SELECT * FROM klijenti')
     Left = 48
-    Top = 320
+    Top = 256
     object queryKlijentiid_klijenta: TFDAutoIncField
       FieldName = 'id_klijenta'
       Origin = 'id_klijenta'
@@ -308,6 +308,11 @@ object mainDataModul: TmainDataModul
     object queryKlijentiemail_klijenta: TStringField
       FieldName = 'email_klijenta'
       Origin = 'email_klijenta'
+      Size = 30
+    end
+    object queryKlijentibroj_licne: TStringField
+      FieldName = 'broj_licne'
+      Origin = 'broj_licne'
       Size = 30
     end
   end
@@ -343,5 +348,45 @@ object mainDataModul: TmainDataModul
       'SELECT * FROM poslata_doc')
     Left = 120
     Top = 24
+  end
+  object queryFaktura: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM faktura')
+    Left = 48
+    Top = 320
+    object FDAutoIncField2: TFDAutoIncField
+      FieldName = 'id_klijenta'
+      Origin = 'id_klijenta'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object StringField7: TStringField
+      FieldName = 'ime_klijenta'
+      Origin = 'ime_klijenta'
+      Size = 30
+    end
+    object StringField8: TStringField
+      FieldName = 'prezime_klijenta'
+      Origin = 'prezime_klijenta'
+      Size = 30
+    end
+    object StringField9: TStringField
+      FieldName = 'adresa_klijenta'
+      Origin = 'adresa_klijenta'
+      Size = 30
+    end
+    object StringField10: TStringField
+      FieldName = 'email_klijenta'
+      Origin = 'email_klijenta'
+      Size = 30
+    end
+  end
+  object queryDelete: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'DELETE FROM Klijenti WHERE id_klijenta = '#39' + editID + '#39';')
+    Left = 400
+    Top = 344
   end
 end

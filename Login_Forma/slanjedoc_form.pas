@@ -77,9 +77,6 @@ begin
 
             ShowMessage('Uspesno ste poslali dokument!');
 
-        end else if ((vrstadoc.ToString = 'racun za struju') or (vrstadoc.ToString = 'racun za vodu')) then
-        begin
-
         end;
 
 

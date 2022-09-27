@@ -1,9 +1,10 @@
-object faktura: Tfaktura
+object editFakturaFinal: TeditFakturaFinal
   Left = 0
   Top = 0
-  ClientHeight = 749
-  ClientWidth = 1370
-  Caption = 'faktura'
+  ClientHeight = 457
+  ClientWidth = 699
+  Caption = 'UniForm1'
+  OnShow = UniFormShow
   OldCreateOrder = False
   MonitoredKeys.Keys = <>
   PixelsPerInch = 96
@@ -11,117 +12,170 @@ object faktura: Tfaktura
   object UniPanel1: TUniPanel
     Left = 0
     Top = 0
-    Width = 1370
-    Height = 749
+    Width = 699
+    Height = 457
     Hint = ''
     Align = alClient
-    ParentFont = False
-    Font.Height = -13
-    Font.Style = [fsBold]
     TabOrder = 0
     Caption = ''
-    object UniLabel10: TUniLabel
-      AlignWithMargins = True
-      Left = 1040
-      Top = 89
-      Width = 243
+    ExplicitLeft = 232
+    ExplicitTop = 184
+    ExplicitWidth = 256
+    ExplicitHeight = 128
+    object UniLabel1: TUniLabel
+      Left = 328
+      Top = 3
+      Width = 49
       Height = 16
       Hint = ''
-      Alignment = taRightJustify
-      Caption = 'advokatska@asss.com / www.asss.rs'
-      TabOrder = 1
-    end
-    object UniLabel9: TUniLabel
-      AlignWithMargins = True
-      Left = 1134
-      Top = 70
-      Width = 117
-      Height = 16
-      Hint = ''
-      Alignment = taRightJustify
-      Caption = '34000 Kragujevac'
-      TabOrder = 2
-    end
-    object UniLabel8: TUniLabel
-      AlignWithMargins = True
-      Left = 1093
-      Top = 51
-      Width = 173
-      Height = 16
-      Hint = ''
-      Alignment = taRightJustify
-      Caption = 'Ranka Brankovica - Bubanj'
-      TabOrder = 3
-    end
-    object UniLabel6: TUniLabel
-      AlignWithMargins = True
-      Left = 1032
-      Top = 32
-      Width = 189
-      Height = 16
-      Hint = ''
-      Alignment = taRightJustify
-      Caption = 'Advokatska kancelarija ASSS'
+      Caption = 'Faktura'
       ParentFont = False
       Font.Height = -13
       Font.Style = [fsBold]
-      TabOrder = 4
-    end
-    object UniLabel5: TUniLabel
-      AlignWithMargins = True
-      Left = 33
-      Top = 321
-      Width = 26
-      Height = 16
-      Hint = ''
-      Alignment = taRightJustify
-      Caption = 'PIB:'
       ParentColor = False
       Color = clBtnFace
-      TabOrder = 5
+      TabOrder = 1
+    end
+    object ime_klijent: TUniLabel
+      Left = 13
+      Top = 49
+      Width = 55
+      Height = 13
+      Hint = ''
+      Caption = 'Ime klijenta'
+      ParentColor = False
+      Color = clBtnFace
+      TabOrder = 2
+    end
+    object editImeKlijenta: TUniEdit
+      Left = 176
+      Top = 40
+      Width = 121
+      Hint = ''
+      Text = ''
+      TabOrder = 3
     end
     object UniLabel4: TUniLabel
-      AlignWithMargins = True
-      Left = 33
-      Top = 283
-      Width = 29
-      Height = 16
+      Left = 13
+      Top = 89
+      Width = 78
+      Height = 13
       Hint = ''
-      Alignment = taRightJustify
-      Caption = 'Ime:'
+      Caption = 'Prezime klijenta:'
+      ParentColor = False
+      Color = clBtnFace
+      TabOrder = 4
+    end
+    object editPrezime: TUniEdit
+      Left = 176
+      Top = 80
+      Width = 121
+      Hint = ''
+      Text = ''
+      TabOrder = 5
+    end
+    object UniLabel5: TUniLabel
+      Left = 13
+      Top = 169
+      Width = 65
+      Height = 13
+      Hint = ''
+      Caption = 'Email klijenta:'
       ParentColor = False
       Color = clBtnFace
       TabOrder = 6
     end
-    object UniLabel2: TUniLabel
-      AlignWithMargins = True
-      Left = 33
-      Top = 302
-      Width = 52
-      Height = 16
+    object editEmail: TUniEdit
+      Left = 176
+      Top = 160
+      Width = 121
       Hint = ''
-      Alignment = taRightJustify
+      Text = ''
+      TabOrder = 7
+    end
+    object adresa_klijenta: TUniLabel
+      Left = 13
+      Top = 131
+      Width = 38
+      Height = 13
+      Hint = ''
       Caption = 'Adresa:'
       ParentColor = False
       Color = clBtnFace
-      TabOrder = 7
-    end
-    object UniLabel11: TUniLabel
-      AlignWithMargins = True
-      Left = 994
-      Top = 108
-      Width = 307
-      Height = 16
-      Hint = ''
-      Alignment = taRightJustify
-      Caption = 'Mati'#269'ni broj: 189194894849 / PIB: 5884919189'
       TabOrder = 8
     end
+    object pib_klijenta: TUniLabel
+      Left = 14
+      Top = 207
+      Width = 75
+      Height = 13
+      Hint = ''
+      Caption = 'Broj licne karte:'
+      ParentColor = False
+      Color = clBtnFace
+      TabOrder = 9
+    end
+    object editAdresaKlijenta: TUniEdit
+      Left = 177
+      Top = 122
+      Width = 121
+      Hint = ''
+      Text = ''
+      TabOrder = 10
+    end
+    object editBrojLicne: TUniEdit
+      Left = 177
+      Top = 198
+      Width = 121
+      Hint = ''
+      Text = ''
+      TabOrder = 11
+    end
+    object UniLabel3: TUniLabel
+      Left = 14
+      Top = 248
+      Width = 77
+      Height = 13
+      Hint = ''
+      Caption = 'Pruzene usluge:'
+      ParentColor = False
+      Color = clBtnFace
+      TabOrder = 12
+    end
+    object editPruzeneUsluge: TUniEdit
+      Left = 176
+      Top = 239
+      Width = 481
+      Hint = ''
+      Text = ''
+      TabOrder = 13
+      ReadOnly = True
+    end
+    object editUkupnaCena: TUniEdit
+      Left = 176
+      Top = 282
+      Width = 122
+      Hint = ''
+      Text = '0'
+      TabOrder = 14
+      ReadOnly = True
+    end
+    object UniLabel2: TUniLabel
+      Left = 14
+      Top = 291
+      Width = 92
+      Height = 13
+      Hint = ''
+      Caption = 'Ukupno zaduzenje:'
+      ParentColor = False
+      Color = clBtnFace
+      TabOrder = 15
+    end
     object UniImage1: TUniImage
-      Left = 24
-      Top = 16
-      Width = 225
-      Height = 217
+      Left = 424
+      Top = 40
+      Width = 200
+      Height = 180
       Hint = ''
       Stretch = True
       Picture.Data = {
@@ -6438,313 +6492,15 @@ object faktura: Tfaktura
         0A859010420821841042F4140A2121841042082184E829144242082184104208
         D153FE0FFF57BEFF0B9327790000000049454E44AE426082}
     end
-    object UniPanel3: TUniPanel
-      Left = 1
-      Top = 428
-      Width = 1368
-      Height = 320
+    object UniButton1: TUniButton
+      Left = 302
+      Top = 384
+      Width = 107
+      Height = 41
       Hint = ''
-      Align = alBottom
-      TabOrder = 10
-      Caption = 'UniPanel2'
-      object UniSplitter1: TUniSplitter
-        Left = 1
-        Top = 1
-        Width = 1277
-        Height = 318
-        Hint = ''
-        Align = alLeft
-        ParentColor = False
-        Color = clBtnFace
-      end
-      object UniButton1: TUniButton
-        Left = 688
-        Top = 81
-        Width = 120
-        Height = 25
-        Hint = ''
-        Caption = 'Unesi podatke'
-        TabOrder = 2
-        OnClick = UniButton1Click
-      end
-      object UniLabel14: TUniLabel
-        AlignWithMargins = True
-        Left = 32
-        Top = 18
-        Width = 75
-        Height = 16
-        Hint = ''
-        Alignment = taRightJustify
-        Caption = 'Faktura NO:'
-        ParentFont = False
-        Font.Height = -13
-        Font.Style = [fsBold]
-        ParentColor = False
-        Color = clBtnFace
-        TabOrder = 3
-      end
-      object UniLabel15: TUniLabel
-        AlignWithMargins = True
-        Left = 32
-        Top = 48
-        Width = 84
-        Height = 13
-        Hint = ''
-        Alignment = taRightJustify
-        Caption = 'Datum izdavanja:'
-        ParentColor = False
-        Color = clBtnFace
-        TabOrder = 4
-      end
-      object UniLabel16: TUniLabel
-        AlignWithMargins = True
-        Left = 296
-        Top = 48
-        Width = 78
-        Height = 13
-        Hint = ''
-        Alignment = taRightJustify
-        Caption = 'Datum dospeca:'
-        ParentColor = False
-        Color = clBtnFace
-        TabOrder = 5
-      end
-      object UniLabel17: TUniLabel
-        AlignWithMargins = True
-        Left = 576
-        Top = 48
-        Width = 78
-        Height = 13
-        Hint = ''
-        Alignment = taRightJustify
-        Caption = 'Datum prometa:'
-        ParentColor = False
-        Color = clBtnFace
-        TabOrder = 6
-      end
-      object UniLabel18: TUniLabel
-        AlignWithMargins = True
-        Left = 835
-        Top = 48
-        Width = 82
-        Height = 13
-        Hint = ''
-        Alignment = taRightJustify
-        Caption = 'Mesto izdavanja:'
-        ParentColor = False
-        Color = clBtnFace
-        TabOrder = 7
-      end
-      object UniEdit1: TUniEdit
-        Left = 32
-        Top = 80
-        Width = 143
-        Hint = ''
-        Text = 'Vrsta usluge'
-        TabOrder = 8
-        ReadOnly = True
-      end
-      object UniEdit2: TUniEdit
-        Left = 171
-        Top = 80
-        Width = 143
-        Hint = ''
-        Text = 'Cena Usluge'
-        TabOrder = 9
-        ReadOnly = True
-      end
-      object UniEdit3: TUniEdit
-        Left = 312
-        Top = 80
-        Width = 289
-        Hint = ''
-        Text = 'Ukupno zaduzenje'
-        TabOrder = 10
-        ReadOnly = True
-      end
-      object editMestoIzdavanja: TUniEdit
-        Left = 952
-        Top = 38
-        Width = 143
-        Hint = ''
-        Text = ''
-        TabOrder = 11
-        ReadOnly = True
-      end
-      object editDatumIzdavanja: TUniDateTimePicker
-        Left = 151
-        Top = 40
-        Width = 120
-        Hint = ''
-        DateTime = 44825.000000000000000000
-        DateFormat = 'dd/MM/yyyy'
-        TimeFormat = 'HH:mm:ss'
-        TabOrder = 12
-      end
-      object editDatumDospeca: TUniDateTimePicker
-        Left = 407
-        Top = 40
-        Width = 120
-        Hint = ''
-        DateTime = 44825.000000000000000000
-        DateFormat = 'dd/MM/yyyy'
-        TimeFormat = 'HH:mm:ss'
-        TabOrder = 13
-      end
-      object editDatumPrometa: TUniDateTimePicker
-        Left = 688
-        Top = 40
-        Width = 120
-        Hint = ''
-        DateTime = 44825.000000000000000000
-        DateFormat = 'dd/MM/yyyy'
-        TimeFormat = 'HH:mm:ss'
-        TabOrder = 14
-      end
-      object editUsluge: TUniLabel
-        AlignWithMargins = True
-        Left = 33
-        Top = 120
-        Width = 84
-        Height = 13
-        Hint = ''
-        Alignment = taRightJustify
-        Caption = '______________'
-        ParentColor = False
-        Color = clBtnFace
-        TabOrder = 15
-      end
-      object editCena: TUniLabel
-        AlignWithMargins = True
-        Left = 171
-        Top = 120
-        Width = 84
-        Height = 13
-        Hint = ''
-        Alignment = taRightJustify
-        Caption = '______________'
-        ParentColor = False
-        Color = clBtnFace
-        TabOrder = 16
-      end
-      object editUkupnoZaduzenje: TUniLabel
-        AlignWithMargins = True
-        Left = 312
-        Top = 120
-        Width = 84
-        Height = 13
-        Hint = ''
-        Alignment = taRightJustify
-        Caption = '______________'
-        ParentColor = False
-        Color = clBtnFace
-        TabOrder = 17
-      end
-      object UniButton2: TUniButton
-        Left = 835
-        Top = 81
-        Width = 112
-        Height = 25
-        Hint = ''
-        Caption = 'Posalji fakturu'
-        TabOrder = 18
-        OnClick = UniButton2Click
-      end
-    end
-    object UniLabel1: TUniLabel
-      AlignWithMargins = True
-      Left = 33
-      Top = 256
-      Width = 40
-      Height = 16
-      Hint = ''
-      Alignment = taRightJustify
-      Caption = 'Klijent'
-      ParentFont = False
-      Font.Height = -13
-      Font.Style = [fsBold]
-      ParentColor = False
-      Color = clBtnFace
-      TabOrder = 11
-    end
-    object editAdresa: TUniLabel
-      AlignWithMargins = True
-      Left = 87
-      Top = 302
-      Width = 112
-      Height = 16
-      Hint = ''
-      Alignment = taRightJustify
-      Caption = '______________'
-      ParentColor = False
-      Color = clBtnFace
-      TabOrder = 12
-    end
-    object UniLabel12: TUniLabel
-      AlignWithMargins = True
-      Left = 1033
-      Top = 127
-      Width = 253
-      Height = 16
-      Hint = ''
-      Alignment = taRightJustify
-      Caption = 'UniCredit Bank / 516989981956198189'
-      TabOrder = 13
-    end
-    object faktura_naslov: TUniLabel
-      AlignWithMargins = True
-      Left = 608
-      Top = 16
-      Width = 98
-      Height = 16
-      Hint = ''
-      Alignment = taRightJustify
-      Caption = 'FAKTURA FINAL'
-      ParentFont = False
-      Font.Height = -13
-      Font.Style = [fsBold]
-      ParentColor = False
-      Color = clBtnFace
-      TabOrder = 14
-    end
-    object editIme: TUniLabel
-      AlignWithMargins = True
-      Left = 87
-      Top = 283
-      Width = 112
-      Height = 16
-      Hint = ''
-      Alignment = taRightJustify
-      Caption = '______________'
-      ParentColor = False
-      Color = clBtnFace
-      TabOrder = 15
-    end
-    object editPIB: TUniLabel
-      AlignWithMargins = True
-      Left = 87
-      Top = 321
-      Width = 112
-      Height = 16
-      Hint = ''
-      Alignment = taRightJustify
-      Caption = '______________'
-      ParentColor = False
-      Color = clBtnFace
-      TabOrder = 16
-    end
-    object faktura_no: TUniLabel
-      AlignWithMargins = True
-      Left = 130
-      Top = 446
-      Width = 62
-      Height = 16
-      Hint = ''
-      Alignment = taRightJustify
-      Caption = '142-2365'
-      ParentColor = False
-      Color = clBtnFace
+      Caption = 'Posalji'
       TabOrder = 17
+      OnClick = UniButton1Click
     end
   end
 end

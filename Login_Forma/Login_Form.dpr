@@ -17,7 +17,8 @@ uses
   advokatska_tarifa_form in 'advokatska_tarifa_form.pas' {adv_tarifa: TUniForm},
   Klijenti in 'Klijenti.pas' {prikaz_klijenata: TUniForm},
   dodaj_klijenta in 'dodaj_klijenta.pas' {klijent_dodaj: TUniForm},
-  izmeni_klijenta in 'izmeni_klijenta.pas' {klijent_izmena: TUniForm};
+  izmeni_klijenta in 'izmeni_klijenta.pas' {klijent_izmena: TUniForm},
+  FakturaFinal in 'FakturaFinal.pas' {editFakturaFinal: TUniForm};
 
 {$R *.res}
 

@@ -122,5 +122,24 @@ object klijent_izmena: Tklijent_izmena
       TabOrder = 11
       OnClick = UniButton2Click
     end
+    object UniLabel6: TUniLabel
+      Left = 40
+      Top = 280
+      Width = 47
+      Height = 13
+      Hint = ''
+      Caption = 'Broj licne:'
+      ParentColor = False
+      Color = clBtnFace
+      TabOrder = 12
+    end
+    object editBrojLicne: TUniEdit
+      Left = 112
+      Top = 271
+      Width = 193
+      Hint = ''
+      Text = ''
+      TabOrder = 13
+    end
   end
 end
